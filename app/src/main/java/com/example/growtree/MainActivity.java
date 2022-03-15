@@ -33,6 +33,7 @@ public class MainActivity<level> extends AppCompatActivity {
         imageView = findViewById(R.id.star);
         imageView2 = findViewById(R.id.star2);
         imageView3 = findViewById(R.id.star3);
+
         //level = false;
 
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
