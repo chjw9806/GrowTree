@@ -10,9 +10,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+
 public class MainActivity<level> extends AppCompatActivity {
 
-    ImageView imageView,imageView2,imageView3;
+    ImageView imageView,imageView2,imageView3,ra,rabbit;
     //boolean level;
     int count=0;
 
@@ -33,6 +36,16 @@ public class MainActivity<level> extends AppCompatActivity {
         imageView = findViewById(R.id.star);
         imageView2 = findViewById(R.id.star2);
         imageView3 = findViewById(R.id.star3);
+        ra = findViewById(R.id.gif_image);
+        rabbit = findViewById(R.id.gif_image3);
+
+        GlideDrawableImageViewTarget gifImage = new GlideDrawableImageViewTarget(ra);
+        Glide.with(this).load(R.drawable.ra).into(gifImage);
+
+        //rabbit = (ImageView) findViewById(R.id.gif_image2);
+        GlideDrawableImageViewTarget gifImage2 = new GlideDrawableImageViewTarget(rabbit);
+        Glide.with(this).load(R.drawable.rabbit).into(gifImage2);
+
 
         //level = false;
 
